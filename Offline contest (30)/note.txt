@@ -1,0 +1,9 @@
+1.resistance
+注意精度，括号匹配，递归求解
+2
+0.001 0.001
+R1|R2
+2.pig
+SPFA判环，在负环中的点dis设为-oo
+3.snack
+迭代加深搜索，hash+A*剪枝

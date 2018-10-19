@@ -1,0 +1,6 @@
+1.toy
+下标从0开始，顺时针为0，要减，逆时针为1，要加。
+2.running
+3.classroom
+dp[i][j][lstnode][1]=(k[i])*(dis[lstnode][d[i]]+min(dp[i+1][j-1][d[i]][0,1])+(1-k[i])*(dis[lstnode][c[i]]+min(dp[i+1][j-1][c[i]][0,1])
+dp[i][j][lstnode][1]=k[i]*dis[lstnode][d[i]]+(1-k[i])*dis[lstnode][c[i]]+(1-k[i])*min(dp[i+1][j-1][d[i]][0,1]+k[i]*min(dp[i+1][j-1][d[i]][0,1])
