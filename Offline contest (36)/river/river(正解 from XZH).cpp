@@ -9,7 +9,7 @@ int len,A[105];
 int S,T,n;
 bool check(int l){
 	if(l<0)return 0;
-	int t=l/S,lim=t*T;
+	int t=l/S,lim=t*T; 
 	return l<=lim;
 }
 int main(){

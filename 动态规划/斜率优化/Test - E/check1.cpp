@@ -15,8 +15,8 @@ int main(){//name memory long long * mod -
 //	printf("%.2lf\n",(sizeof(p))/1024.0/1024);
 //	freopen("barn.in","r",stdin);
 //	freopen("barn.out","w",stdout);
-//	freopen("data.in","r",stdin);
-//	freopen("pro.out","w",stdout);
+	freopen("data.in","r",stdin);
+	freopen("check.out","w",stdout);
 	scanf("%d%d",&n,&K);
 	for(int i=1;i<=n;i++){
 		scanf("%d",&A[i]);
@@ -32,10 +32,7 @@ int main(){//name memory long long * mod -
 					Min(dp[fi][i][p],dp[fi][j][p-1]+L(j+1,i-1));
 				}
 			}
-	for(int p=1;p<=K;p++)
-		for(int i=1;i<=n;i++)
-			for(int j=i+p-1;j<=n;j++)
-				printf("%d %d %d %lld\n",p,i,j,dp[i][j][p]);
+//	for(int p=1;p<=K;p++)%d %lld\n",p,i,j,dp[i][j][p]);
 	LL ans=1e16;
 	for(int lst=1;lst<=n;lst++)
 		for(int fi=1;fi<=lst;fi++){
