@@ -5,7 +5,7 @@ using namespace std;
 #define bit(x) (1<<i)
 int rx[]={0,1,0,-1,1,1,-1,-1};
 int ry[]={-1,0,1,0,-1,1,1,-1};
-const int BASE=1e9+7,MOD=1e9+9;//注意修改模数 
+const int BASE=233,MOD=1e9+9;//注意修改模数 
 struct Node{
 	int x,y;
 	LL val;
@@ -24,7 +24,7 @@ LL gcd(LL a,LL b){
 }
 void Init(){//倍增为开区间,不包含第一个点!!! 
 	Base[0]=BASE;
-	for(int i=1;i<=30;i++){
+	for(int i=1;i<=30;i++){//!!! 15->30
 		Base[i]=Base[i-1]*Base[i-1]%MOD;
 	}
 	for(int i=1;i<=n;i++)
@@ -36,7 +36,6 @@ void Init(){//倍增为开区间,不包含第一个点!!!
 				if(ny<1)ny=m;
 				if(ny>m)ny=1;
 				T[i][j][k][0]=(Node){nx,ny,mp[nx][ny]};
-//				printf("%d\n",mp[nx][ny]-'a');
 			}
 		}
 	for(int t=1;t<=30;t++)
@@ -48,7 +47,6 @@ void Init(){//倍增为开区间,不包含第一个点!!!
 					Node c=b;
 					Add(c.val,a.val*Base[t-1]%MOD);
 					T[i][j][d][t]=c;
-//					printf("%lld\n",c.val);
 				}
 			}
 }
@@ -66,17 +64,14 @@ LL Up(int x,int y,int d,int t){
 void Solve(){
 	for(int i=1;i<=n;i++)
 		for(int j=1;j<=m;j++){
-//			printf("%d %d\n",i,j);
 			for(int d=0;d<8;d++){
 				LL NewV=Up(i,j,d,K-1);
 				LL c=cnt[NewV];
 				mon++;
 				son+=1+2*c;
 				cnt[NewV]++;
-				printf("%lld\n",NewV);
 			}
 		}
-//	printf("son:%lld\n",son);
 	mon=mon*mon;
 	LL d=gcd(son,mon);
 	son/=d,mon/=d;
