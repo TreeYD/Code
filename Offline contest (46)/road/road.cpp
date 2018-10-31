@@ -59,8 +59,8 @@ void solve(){
 }
 int main(){//name memory long long * mod - ÇÐ·ÖÅÐ¶Ï ¼«Öµ
 //	printf("%.2lf\n",(sizeof(p))/1024.0/1024);
-	freopen("road.in","r",stdin);
-	freopen("road.out","w",stdout);
+//	freopen("road.in","r",stdin);
+//	freopen("road.out","w",stdout);
 	scanf("%d",&n);
 	for(int i=1;i<=n;i++){
 		scanf("%d",&A[i]);

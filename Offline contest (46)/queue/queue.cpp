@@ -38,6 +38,7 @@ struct P1{//n<=2000&&t<=2000 || 树是随机造的
 					cnt++;
 				}
 				E[fa[x]].insert(x);
+				mark[x]=0;
 				printf("%d\n",cnt);
 			}
 		}
@@ -45,8 +46,8 @@ struct P1{//n<=2000&&t<=2000 || 树是随机造的
 }p1;
 int main(){//name memory long long * mod - 切分判断 极值
 //	printf("%.2lf\n",(sizeof(p))/1024.0/1024);
-	freopen("queue.in","r",stdin);
-	freopen("queue.out","w",stdout);
+//	freopen("queue2.in","r",stdin);
+//	freopen("queue.out","w",stdout);
 	scanf("%d%d",&n,&T);
 	int x,y;
 	for(int i=1;i<n;i++){
